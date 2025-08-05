@@ -40,34 +40,18 @@ const getEnvVar = (key: string, fallback?: string): string => {
 
 // Firebase configuration
 const firebaseConfig: FirebaseConfig = {
-  apiKey: getEnvVar("VITE_FIREBASE_API_KEY", "demo-api-key"),
-  authDomain: getEnvVar(
-    "VITE_FIREBASE_AUTH_DOMAIN",
-    "demo-project.firebaseapp.com",
-  ),
-  projectId: getEnvVar(
-    "VITE_FIREBASE_PROJECT_ID",
-    "demo-project",
-  ),
-  storageBucket: getEnvVar(
-    "VITE_FIREBASE_STORAGE_BUCKET",
-    "demo-project.appspot.com",
-  ),
-  messagingSenderId: getEnvVar(
-    "VITE_FIREBASE_MESSAGING_SENDER_ID",
-    "123456789",
-  ),
-  appId: getEnvVar(
-    "VITE_FIREBASE_APP_ID",
-    "1:123456789:web:abcdef123456",
-  ),
-  measurementId: getEnvVar("VITE_FIREBASE_MEASUREMENT_ID"),
+  apiKey: "AIzaSyBzhtxNkYC1wRbOiaKrAFR_x6vQcr2eMQU",
+  authDomain: "beom-med4.firebaseapp.com",
+  projectId: "beom-med4",
+  storageBucket: "beom-med4.firebasestorage.app",
+  messagingSenderId: "394281537730",
+  appId: "1:394281537730:web:fe87cec29a188826d5eb5b",
+  measurementId: "G-4B7BPYGPG0",
 };
 
 // Check if we're in demo mode
 const isDemoMode =
-  firebaseConfig.apiKey === "demo-api-key" ||
-  firebaseConfig.projectId === "demo-project";
+  false; // Set to false since we have real Firebase config
 
 // Initialize Firebase only if not in demo mode and not already initialized
 let app: FirebaseApp;

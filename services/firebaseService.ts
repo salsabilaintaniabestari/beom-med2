@@ -150,7 +150,8 @@ export interface NotificationData {
 class FirebaseService {
   private checkDemoMode() {
     if (config.isDemoMode) {
-      throw new Error('Aplikasi dalam mode demo. Konfigurasi Firebase untuk fitur lengkap.');
+      console.warn('Aplikasi dalam mode demo. Beberapa fitur mungkin terbatas.');
+      return;
     }
   }
 
